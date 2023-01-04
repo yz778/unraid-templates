@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Maintainer>
+  <Icon>https://raw.githubusercontent.com/dannymate/unraid-templates/master/icons/avatar.png</Icon>
+  <Profile>
+    FOSS and Self-Hosting fan hoping to bring interesting applications to UNRAID. 
+  </Profile>
+  <WebPage>https://github.com/dannymate</WebPage>
+  <Twitter>https://twitter.com/slumbering_cat</Twitter>
+  <!--DonateLink></DonateLink-->
+  <!--DonateText></DonateText-->
+</Maintainer>
