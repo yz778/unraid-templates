@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>NetBird-Client</Name>
+  <Repository>netbirdio/netbird</Repository>
+  <Registry>https://hub.docker.com/r/netbirdio/netbird/</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/133241-support-netbird/</Support>
+  <Project>https://netbird.io</Project>
+  <Overview>NetBird is an open-source VPN management platform built on top of WireGuard&#xAE; making it easy to create secure private networks for your organization or home.</Overview>
+  <Category>Network:DNS Network:Management Network:VPN</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/dannymate/unraid-templates/master/icons/NetBird-Icon.png</Icon>
+  <ExtraParams>--cap-add=NET_ADMIN</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1672848736</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Setup Key" Target="NB_SETUP_KEY" Default="" Mode="" Description="Setup key obtained from the Management Service Dashboard (used to register peer)" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Management URL" Target="NB_MANAGEMENT_URL" Default="https://api.wiretrustee.com:33073" Mode="" Description="Management Service URL [http|https]://[host]:[port]" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Appdata" Target="/etc/netbird" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/netbird</Config>
+  <Config Name="Log File" Target="NB_LOG_FILE" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">console</Config>
+  <Config Name="Log Level" Target="NB_LOG_LEVEL" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">info</Config>
+  <Config Name="Admin Portal URL" Target="NB_ADMIN_URL" Default="https://app.netbird.io" Mode="" Description="Admin Panel URL [http|https]://[host]:[port]" Type="Variable" Display="advanced" Required="false" Mask="false">https://app.netbird.io</Config>
+  <Config Name="Wireguard PreSharedKey" Target="NB_PRESHARED_KEY" Default="" Mode="" Description="Sets Wireguard PreSharedKey property. If set, then only peers that have the same key can communicate." Type="Variable" Display="advanced" Required="false" Mask="true"/>
+</Container>
