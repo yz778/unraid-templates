@@ -1,0 +1,50 @@
+{
+    "Stuns": [
+        {
+            "Proto": "udp",
+            "URI": "stun:netbird.mydomain.net:3478",
+            "Username": "",
+            "Password": null
+        }
+    ],
+    "TURNConfig": {
+        "Turns": [
+            {
+                "Proto": "udp",
+                "URI": "turn:netbird.mydomain.net:3478",
+                "Username": "username",
+                "Password": "password"
+            }
+        ],
+        "CredentialsTTL": "12h",
+        "Secret": "secret",
+        "TimeBasedCredentials": false
+    },
+    "Signal": {
+        "Proto": "https",
+        "URI": "netbird.mydomain.net:443",
+        "Username": "",
+        "Password": null
+    },
+    "Datadir": "",
+    "HttpConfig": {
+        "Address": "0.0.0.0:33073",
+        "AuthIssuer": "https://keycloak.mydomain.net/realms/netbird",
+        "AuthAudience": "netbird-client",
+        "AuthKeysLocation": "https://keycloak.mydomain.net/realms/netbird/protocol/openid-connect/certs",
+        "OIDCConfigEndpoint":"https://keycloak.mydomain.net/realms/netbird/.well-known/openid-configuration"
+    },
+    "IdpManagerConfig": {
+        "Manager": "none"
+     },
+    "DeviceAuthorizationFlow": {
+        "Provider": "hosted",
+        "ProviderConfig": {
+          "Audience": "netbird-client",
+          "Domain": "",
+          "ClientID": "netbird-client",
+          "TokenEndpoint": "https://keycloak.mydomain.net/realms/netbird/protocol/openid-connect/token",
+          "DeviceAuthEndpoint": "https://keycloak.mydomain.net/realms/netbird/protocol/openid-connect/auth/device"
+         }
+    }
+}
