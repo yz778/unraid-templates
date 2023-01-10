@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>NetBird-Management</Name>
+  <Repository>netbirdio/management</Repository>
+  <Registry>https://hub.docker.com/r/netbirdio/management/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/133241-support-netbird/</Support>
+  <Project>https://netbird.io</Project>
+  <Overview>NetBird is an open-source VPN management platform built on top of WireGuard&#xAE; making it easy to create secure private networks for your organization or home.</Overview>
+  <Category>Network:DNS Network:Management Network:VPN</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/dannymate/unraid-templates/master/icons/netbird-management-icon-256px.png</Icon>
+  <ExtraParams/>
+  <PostArgs>--port 443 --log-file console --disable-anonymous-metrics=false --single-account-mode-domain=netbird.mydomain.net --dns-domain=netbird.selfhosted</PostArgs>
+  <CPUset/>
+  <DateInstalled>1673365138</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>NetBird-Dashboard&#xD;
+NetBird-Signal</Requires>
+  <Config Name="HTTPS" Target="443" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">33073</Config>
+  <Config Name="Config" Target="/etc/netbird/management.json" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/netbird-server/management/management.json</Config>
+  <Config Name="Appdata" Target="/var/lib/netbird" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/netbird-server/management/data</Config>
+</Container>

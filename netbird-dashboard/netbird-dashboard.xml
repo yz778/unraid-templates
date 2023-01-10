@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>NetBird-Dashboard</Name>
+  <Repository>wiretrustee/dashboard</Repository>
+  <Registry>https://hub.docker.com/r/wiretrustee/dashboard/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/133241-support-netbird/</Support>
+  <Project>https://netbird.io</Project>
+  <Overview>NetBird is an open-source VPN management platform built on top of WireGuard&#xAE; making it easy to create secure private networks for your organization or home.</Overview>
+  <Category>Network:DNS Network:Management Network:VPN</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/dannymate/unraid-templates/master/icons/netbird-dashboard-icon-256px.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1673364828</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>NetBird-Management&#xD;
+NetBird-Signal</Requires>
+  <Config Name="HTTP" Target="80" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">8089</Config>
+  <Config Name="HTTPS" Target="443" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">7443</Config>
+  <Config Name="AUTH_AUDIENCE" Target="AUTH_AUDIENCE" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">netbird-client</Config>
+  <Config Name="AUTH_CLIENT_ID" Target="AUTH_CLIENT_ID" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">netbird-client</Config>
+  <Config Name="AUTH_AUTHORITY" Target="AUTH_AUTHORITY" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">https://keycloak.meydomain.net/realms/netbird</Config>
+  <Config Name="USE_AUTH0" Target="USE_AUTH0" Default="false" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
+  <Config Name="AUTH_SUPPORTED_SCOPES" Target="AUTH_SUPPORTED_SCOPES" Default="openid profile email offline_access api" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">openid profile email offline_access api</Config>
+  <Config Name="NETBIRD_MGMT_API_ENDPOINT" Target="NETBIRD_MGMT_API_ENDPOINT" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">https://netbird.mydomain.net</Config>
+  <Config Name="NETBIRD_MGMT_GRPC_API_ENDPOINT" Target="NETBIRD_MGMT_GRPC_API_ENDPOINT" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">https://netbird.mydomain.net</Config>
+  <Config Name="AUTH_REDIRECT_URI" Target="AUTH_REDIRECT_URI" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="AUTH_SILENT_REDIRECT_URI" Target="AUTH_SILENT_REDIRECT_URI" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+</Container>

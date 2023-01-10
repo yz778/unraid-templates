@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>NetBird-Signal</Name>
+  <Repository>netbirdio/signal</Repository>
+  <Registry>https://hub.docker.com/r/netbirdio/signal/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/133241-support-netbird/</Support>
+  <Project>https://netbird.io</Project>
+  <Overview>NetBird is an open-source VPN management platform built on top of WireGuard&#xAE; making it easy to create secure private networks for your organization or home.</Overview>
+  <Category>Network:DNS Network:Management Network:VPN</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/dannymate/unraid-templates/master/icons/netbird-signal-icon-256px.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1673365211</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>NetBird-Management&#xD;
+NetBird-Dashboard</Requires>
+  <Config Name="Port" Target="80" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">10000</Config>
+  <Config Name="Data" Target="/var/lib/netbird" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/netbird-server/signal/data</Config>
+</Container>
