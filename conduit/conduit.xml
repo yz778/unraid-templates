@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Conduit</Name>
+  <Repository>matrixconduit/matrix-conduit:latest</Repository>
+  <Registry>https://hub.docker.com/r/matrixconduit/matrix-conduit</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/142624-support-conduit/</Support>
+  <Project>https://conduit.rs</Project>
+  <Overview>A simple self-contained Rust-based Matrix server. Fully configurable with Environment Variables! (Beta)&#xD;
+&#xD;
+Check Support Thread for NGINX conf.&#xD;
+&#xD;
+Conduit is Beta, meaning you can join and participate in most Matrix rooms, but not all features are supported and you might run into bugs from time to time.&#xD;
+&#xD;
+Conduit is a lightweight open-source server implementation of the Matrix Specification with a focus on easy setup and low system requirements. That means you can make your own Conduit setup in just a few minutes.&#xD;
+&#xD;
+Conduit keeps things simple, it's a single binary with an embedded database and can be much faster than other server implementations in some cases.&#xD;
+&#xD;
+</Overview>
+  <Category>Productivity:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/dannymate/unraid-templates/master/icons/conduit.png</Icon>
+  <ExtraParams>-d</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1690296307</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Port" Target="6167" Default="6167" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">6167</Config>
+  <Config Name="Data" Target="/var/lib/matrix-conduit/" Default="/mnt/user/appdata/conduit" Mode="rw" Description="This is the only directory where Conduit will save its data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/conduit</Config>
+  <Config Name="CONDUIT_SERVER_NAME" Target="CONDUIT_SERVER_NAME" Default="" Mode="" Description="The domain name of your server. You can't change this later." Type="Variable" Display="always" Required="true" Mask="false">example.com</Config>
+  <Config Name="CONDUIT_DATABASE_BACKEND" Target="CONDUIT_DATABASE_BACKEND" Default="rocksdb" Mode="" Description="'rocksdb' or 'sqlite'" Type="Variable" Display="always" Required="false" Mask="false">rocksdb</Config>
+  <Config Name="CONDUIT_ALLOW_REGISTRATION" Target="CONDUIT_ALLOW_REGISTRATION" Default="true" Mode="" Description="Enables registration. If set to false, no users can register on this server." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="CONDUIT_ALLOW_FEDERATION" Target="CONDUIT_ALLOW_FEDERATION" Default="false" Mode="" Description="If set to true, you can connect and communicate with other Matrix servers" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="CONDUIT_ENABLE_LIGHTNING_BOLT" Target="CONDUIT_ENABLE_LIGHTNING_BOLT" Default="true" Mode="" Description="Add lightning bolt to registered users names" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="CONDUIT_MAX_REQUEST_SIZE" Target="CONDUIT_MAX_REQUEST_SIZE" Default="20000000" Mode="" Description="Max size for uploads, in bytes" Type="Variable" Display="always" Required="false" Mask="false">20000000</Config>
+  <Config Name="CONDUIT_MAX_CONCURRENT_REQUESTS" Target="CONDUIT_MAX_CONCURRENT_REQUESTS" Default="100" Mode="" Description="How many requests Conduit sends to other servers at the same time" Type="Variable" Display="advanced-hide" Required="false" Mask="false">100</Config>
+  <Config Name="CONDUIT_TRUSTED_SERVERS" Target="CONDUIT_TRUSTED_SERVERS" Default="" Mode="" Description="Server to get public keys from. You probably shouldn't change this. Default is: [" Type="Variable" Display="always" Required="true" Mask="false">["matrix.org"]</Config>
+  <Config Name="CONDUIT_LOG" Target="CONDUIT_LOG" Default="warn,rocket=off,_=off,sled=off" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">warn,rocket=off,_=off,sled=off</Config>
+  <Config Name="CONDUIT_ADDRESS" Target="CONDUIT_ADDRESS" Default="0.0.0.0" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">0.0.0.0</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">100</Config>
+  <Config Name="UMASK" Target="UMASK" Default="022" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">022</Config>
+</Container>
