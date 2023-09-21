@@ -28,5 +28,18 @@ server {
 
         proxy_pass $upstream_proto://$upstream_app:$upstream_port$request_uri;
     }
+
+    ### Server delegation stuff
+
+    location /.well-known/matrix/server {
+        return 200 '{"m.server": "matrix.my.domain:443"}';
+        add_header Content-Type application/json;
+    }
+
+    location /.well-known/matrix/client {
+        return 200 '{"m.homeserver": {"base_url": "https://matrix.my.domain"}}';
+        add_header Content-Type application/json;
+        add_header "Access-Control-Allow-Origin" *;
+    }
 }
 
