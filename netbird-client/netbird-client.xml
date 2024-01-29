@@ -9,7 +9,11 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/133241-support-netbird/</Support>
   <Project>https://netbird.io</Project>
-  <Overview>NetBird is an open-source VPN management platform built on top of WireGuard&#xAE; making it easy to create secure private networks for your organization or home.</Overview>
+  <Overview>NetBird is an open-source VPN management platform built on top of WireGuard&#xAE; making it easy to create secure private networks for your organization or home.&#xD;
+&#xD;
+The NetBird Client application (or agent) is a software that is installed on your machines. It is an entry point to you private network that makes it possible for machines to communicate with each other. Once installed and registered, a machine becomes a peer in the network and can be managed from a self-hosted or cloud daashboard.&#xD;
+&#xD;
+Note: This is not neccessary to install if you just want the server stack.</Overview>
   <Category>Network:DNS Network:Management Network:VPN</Category>
   <WebUI/>
   <TemplateURL/>
