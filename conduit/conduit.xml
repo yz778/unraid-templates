@@ -46,4 +46,7 @@ Conduit keeps things simple, it's a single binary with an embedded database and 
   <Config Name="PUID" Target="PUID" Default="1000" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">1000</Config>
   <Config Name="PGID" Target="PGID" Default="1000" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">1000</Config>
   <Config Name="UMASK" Target="UMASK" Default="022" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">022</Config>
+  <Config Name="CONDUIT_DATABASE_PATH" Target="CONDUIT_DATABASE_PATH" Default="/var/lib/matrix-conduit/" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">/var/lib/matrix-conduit/</Config>
+  <Config Name="CONDUIT_PORT" Target="CONDUIT_PORT" Default="6167" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">6167</Config>
+  <Config Name="CONDUIT_CONFIG" Target="CONDUIT_CONFIG" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
 </Container>
