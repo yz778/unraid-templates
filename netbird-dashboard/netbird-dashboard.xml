@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>NetBird-Dashboard</Name>
-  <Repository>wiretrustee/dashboard</Repository>
+  <Repository>netbirdio/dashboard</Repository>
   <Registry>https://hub.docker.com/r/wiretrustee/dashboard/</Registry>
   <Network>bridge</Network>
   <MyIP/>
