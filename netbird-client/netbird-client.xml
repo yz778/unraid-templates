@@ -25,9 +25,9 @@ Note: This is not neccessary to install if you just want the server stack.</Over
   <DonateText/>
   <DonateLink/>
   <Requires/>
-  <Config Name="Setup Key" Target="NB_SETUP_KEY" Default="" Mode="" Description="Setup key obtained from the Management Service Dashboard (used to register peer)" Type="Variable" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="Management URL" Target="NB_MANAGEMENT_URL" Default="https://api.wiretrustee.com:33073" Mode="" Description="Management Service URL [http|https]://[host]:[port]" Type="Variable" Display="always" Required="false" Mask="false">https://api.wiretrustee.com:33073</Config>
-  <Config Name="Appdata" Target="/etc/netbird" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/netbird</Config>
+  <Config Name="Setup Key" Target="NB_SETUP_KEY" Default="" Mode="" Description="Setup key obtained from the Management Service Dashboard (used to register peer)." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Management URL" Target="NB_MANAGEMENT_URL" Default="https://api.netbird.io" Mode="" Description="Management Service URL [http|https]://[host]:[port]" Type="Variable" Display="always" Required="false" Mask="false">https://api.netbird.io:443</Config>
+  <Config Name="Appdata" Target="/var/lib/netbird" Default="" Mode="rw" Description="Volume storage for Netbird configuration state and credentials" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/netbird</Config>
   <Config Name="Log File" Target="NB_LOG_FILE" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">console</Config>
   <Config Name="Log Level" Target="NB_LOG_LEVEL" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">info</Config>
   <Config Name="Admin Portal URL" Target="NB_ADMIN_URL" Default="https://app.netbird.io" Mode="" Description="Admin Panel URL [http|https]://[host]:[port]" Type="Variable" Display="advanced" Required="false" Mask="false">https://app.netbird.io</Config>
